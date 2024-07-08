@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:padding="20dp"
+    tools:context=".activities.RestaurantListActivity">
+
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/botones"
+      android:gravity="center_vertical">
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menú"
+        android:backgroundTint="@color/botones" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Usuario"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesión"
+        android:backgroundTint="@color/botones"/>
+  </LinearLayout>
+
+  <EditText
+      android:id="@+id/etCity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Ciudad"
+      android:textColor="@color/white"
+      android:textColorHint="@color/letra" />
+
+  <EditText
+      android:id="@+id/etDate"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColor="@color/white"
+      android:textColorHint="@color/letra"
+      android:hint="Fecha (YYYY-MM-DD)" />
+
+  <EditText
+      android:id="@+id/etStartTime"
+      android:layout_width="match_parent"
+      android:textColor="@color/white"
+      android:textColorHint="@color/letra"
+      android:layout_height="wrap_content"
+      android:hint="Hora de inicio (HH:MM)" />
+
+  <EditText
+      android:id="@+id/etEndTime"
+      android:layout_width="match_parent"
+      android:textColor="@color/white"
+      android:textColorHint="@color/letra"
+      android:layout_height="wrap_content"
+      android:hint="Hora de fin (HH:MM)" />
+
+  <Button
+      android:id="@+id/btnSearch"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/botones"
+      android:text="Buscar" />
+
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="16dp" />
+
+</LinearLayout>
